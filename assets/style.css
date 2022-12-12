@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@200;300;400;600&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: inter;
+  background-color: #d3bebe;
+}
+
+#moles__wrapper {
+  background-color: rgb(223, 204, 169);
+  display: grid;
+  grid-template-columns: repeat(4, 10vw);
+  grid-template-rows: repeat(2, 10vw);
+  gap: 2em;
+  padding: 5em;
+}
+
+#moles__wrapper div {
+  border-radius: 100%;
+  border: 2px solid black;
+}
+
+.mole {
+  background-color: rgb(44, 109, 170);
+}/*# sourceMappingURL=style.css.map */
