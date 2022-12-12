@@ -7,8 +7,13 @@ let score = 0;
 
 function displayMole() {
     molewrapper.innerHTML="";
-    let random = moles.sort((a,b) => 0.5 - Math.random());
-    console.log(random);
+
+    for (let i = moles.length ; i > 0 ; i++ ) {
+    let j = Math.floor(i * Math.random());
+    let temp = moles[i];
+    moles[i] = moles[j];
+    moles[j] = temp;
+    }
 
     for (mole of moles){
         let molehill = document.createElement("div");
@@ -20,7 +25,7 @@ function displayMole() {
     }
 }
 
-setInterval(displayMole, 2000);
+setInterval(displayMole, 1000);
 
 molewrapper.addEventListener('click', (e) => {
     if (e.target.classList.contains("mole")){
