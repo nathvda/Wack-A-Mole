@@ -32,11 +32,11 @@ setInterval(displayMole, difficulty);
 molewrapper.addEventListener('click', (e) => {
     if (e.target.classList.contains("mole") && clickCount == 0){
         score += 100;
-        scoringArea.innerHTML = `Score : ${score} point${ (score >= 1) ? "" : "s"}`;
+        scoringArea.innerHTML = `Score : ${score} point${ (score == 1 || score == -1) ? "" : "s"}`;
         clickCount = 1;
     } else if (clickCount == 0) {
         score -= 50;
-        scoringArea.innerHTML = `Score : ${score} point${ (score >= 1) ? "" : "s"}`;
+        scoringArea.innerHTML = `Score : ${score} point${ (score == 1 || score == -1) ? "" : "s"}`;
         clickCount = 1;
     } else if (clickCount !== 0){
     }
