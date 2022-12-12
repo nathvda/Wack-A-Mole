@@ -6,7 +6,7 @@ body{
     justify-content: center;
     align-items:center ;
     font-family:inter;
-    background-color:#d3bebe;
+    background-color:#5a5757;
 }
 
 #moles__wrapper{
@@ -16,13 +16,19 @@ body{
     grid-template-rows: repeat(4,10vw);
     gap:2em;
     padding:5em;
+    background-image:url("./images/ground.png");
+    background-size:10vw;
+    border-radius:5vw;
 }
 
 #moles__wrapper div{
     border-radius:100%;
-    border:2px solid black;
+    border:0px solid black;
 }
 
 .mole{
-    background-color:rgb(44, 109, 170);
+    background-image:url("./images/dogPoop.png");
+    background-size:80%;
+    background-repeat:no-repeat;
+    background-position:center;
 }

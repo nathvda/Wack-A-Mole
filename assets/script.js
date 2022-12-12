@@ -3,6 +3,7 @@ let scoringArea = document.getElementById("score");
 let moles = [0, 0, 0, 0, 1, 0, 0, 0, 0, 0 , 0 ,0 ,0 ,0 ,0 , 0];
 
 let score = 0;
+let clickCount = 0;
 
 function displayMole() {
     molewrapper.innerHTML = "";
@@ -21,18 +22,22 @@ function displayMole() {
         }
         molewrapper.appendChild(molehill);
     }
+    clickCount = 0;
 }
 
-setInterval(displayMole, 1000);
+let difficulty = 2000;
+
+setInterval(displayMole, difficulty);
 
 molewrapper.addEventListener('click', (e) => {
-    if (e.target.classList.contains("mole")){
+    if (e.target.classList.contains("mole") && clickCount == 0){
         score += 100;
         scoringArea.innerHTML = `Score : ${score} point${ (score >= 1) ? "" : "s"}`;
-    } else {
+        clickCount = 1;
+    } else if (clickCount == 0) {
         score -= 50;
         scoringArea.innerHTML = `Score : ${score} point${ (score >= 1) ? "" : "s"}`;
+        clickCount = 1;
+    } else if (clickCount !== 0){
     }
 })
-
-
