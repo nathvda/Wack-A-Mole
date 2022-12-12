@@ -1,6 +1,6 @@
 let molewrapper = document.getElementById("moles__wrapper");
 let scoringArea = document.getElementById("score");
-let moles = [0, 0, 0, 0, 1, 0, 0, 0];
+let moles = [0, 0, 0, 0, 1, 0, 0, 0, 0, 0 , 0 ,0 ,0 ,0 ,0 , 0];
 console.log(moles);
 
 let score = 0;
