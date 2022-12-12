@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@200;300;400;600&display=swap");
+
 body {
   display: flex;
   flex-direction: column;
@@ -24,4 +25,6 @@ body {
 
 .mole {
   background-color: rgb(44, 109, 170);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
