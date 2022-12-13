@@ -21,16 +21,18 @@ function displayMole() {
             molehill.classList.add("mole");
         }
         molewrapper.appendChild(molehill);
+        molehill.classList.add("moleitem");
     }
     clickCount = 0;
 }
 
-let difficulty = 2000;
+let difficulty = 1000;
 
-setInterval(displayMole, difficulty);
+let displaying = setInterval(displayMole, difficulty);
 
 molewrapper.addEventListener('click', (e) => {
     if (e.target.classList.contains("mole") && clickCount == 0){
+        e.target.remove();
         score += 100;
         scoringArea.innerHTML = `Score : ${score} point${ (score == 1 || score == -1) ? "" : "s"}`;
         clickCount = 1;
@@ -41,3 +43,25 @@ molewrapper.addEventListener('click', (e) => {
     } else if (clickCount !== 0){
     }
 })
+
+let i = 60;
+let endOfGame = setInterval(() => {
+i--; 
+document.getElementById("timer").innerHTML = `${i} seconde${(i > 1)? "s" : ""} restante${(i > 1)? "s" : ""}`;
+
+if (i == 0){
+    endGame();
+    clearInterval(endOfGame);
+    clearInterval(displaying);
+}
+
+},1000);
+
+
+function endGame(){
+    molewrapper.innerHTML = `<div class="victory__wrapper"><div class="victory">Game Over!</div>
+    <div class="yourScore">Final score : ${score}</div></div>`;
+}
+
+
+
