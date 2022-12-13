@@ -1,5 +1,6 @@
 let molewrapper = document.getElementById("moles__wrapper");
 let scoringArea = document.getElementById("score");
+
 let moles = [0, 0, 0, 0, 1, 0, 0, 0, 0, 0 , 0 ,0 ,0 ,0 ,0 , 0];
 
 let score = 0;
@@ -7,6 +8,7 @@ let clickCount = 0;
 
 function displayMole() {
     molewrapper.innerHTML = "";
+
 
     for (let i = moles.length-1 ; i > 0 ; i-- ) {
     let j = Math.floor(i * Math.random());
